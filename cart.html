@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Online Store</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Online Store</a>
+      <a class="cart-link" href="cart.html">Cart <span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 class="page-title">Cart</h1>
+
+    <div id="cart-empty" class="state-box" hidden>
+      <p>Your cart is empty</p>
+    </div>
+
+    <div id="cart-content" hidden>
+      <ul id="cart-lines" class="cart-lines"></ul>
+
+      <div class="cart-summary">
+        <p class="cart-total">Total: <strong id="cart-total">$0.00</strong></p>
+        <a class="btn btn-primary" href="checkout.html">Checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/cart-page.js" defer></script>
+</body>
+</html>

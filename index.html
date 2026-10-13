@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Online Store</a>
+      <a class="cart-link" href="cart.html">Cart <span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 class="page-title">Catalog</h1>
+
+    <section class="toolbar">
+      <form id="search-form" class="search-form" role="search">
+        <input id="search-input" type="search" placeholder="Search products" aria-label="Search products" autocomplete="off">
+      </form>
+
+      <select id="category-select" aria-label="Category">
+        <option value="">All categories</option>
+      </select>
+
+      <select id="sort-select" aria-label="Sort by">
+        <option value="">Sort by</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="rating-desc">Best rating</option>
+      </select>
+    </section>
+
+    <div id="product-grid" class="product-grid"></div>
+    <div id="status-box"></div>
+    <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+  </main>
+
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+</body>
+</html>

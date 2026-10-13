@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Online Store</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Online Store</a>
+      <a class="cart-link" href="cart.html">Cart <span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 class="page-title">Checkout</h1>
+
+    <div id="checkout-empty" class="state-box" hidden>
+      <p>Your cart is empty</p>
+    </div>
+
+    <form id="checkout-form" class="panel checkout-form" novalidate hidden>
+      <div class="field">
+        <label for="full-name">Full name</label>
+        <input id="full-name" type="text">
+        <p class="field-error" id="full-name-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email">
+        <p class="field-error" id="email-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel">
+        <p class="field-error" id="phone-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="address">Address</label>
+        <input id="address" type="text">
+        <p class="field-error" id="address-error"></p>
+      </div>
+
+      <p class="form-error" id="form-error" role="alert"></p>
+
+      <button class="btn btn-primary" type="submit" id="place-order">Place order</button>
+    </form>
+
+    <section id="confirmation" class="panel confirmation" hidden></section>
+  </main>
+
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</body>
+</html>
